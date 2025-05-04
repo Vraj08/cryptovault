@@ -108,18 +108,34 @@ CryptoVault is a Flask-based web application that simulates a secure cryptocurre
 
 ---
 ## 📷 Screenshots
+## 📷 Screenshots
 
-| Dashboard | Transfer | Confirmation |
-|----------|----------|--------------|
-| ![](screenshots/dashboard.png) | ![](screenshots/transfer.png) | ![](screenshots/success.png) |
+### 🧭 Dashboard
+![Dashboard](screenshots/dashboard.png)
 
-| Login Error | Login Page | Transfer Error |
-|------------|------------|----------------|
-| ![](screenshots/Screenshot%20(53).png) | ![](screenshots/Screenshot%20(52).png) | ![](screenshots/Screenshot%20(50).png) |
+### 💸 Transfer
+![Transfer](screenshots/transfer.png)
 
-| Amount Too High | Transfer Valid | Wallet Details |
-|-----------------|----------------|----------------|
-| ![](screenshots/Screenshot%20(51).png) | ![](screenshots/success.png) | ![](screenshots/Screenshot%20(46).png) |
+### ✅ Confirmation
+![Confirmation](screenshots/success.png)
+
+### ❌ Login Error
+![Login Error](screenshots/Screenshot%20(53).png)
+
+### 🔐 Login Page
+![Login Page](screenshots/Screenshot%20(52).png)
+
+### ⚠️ Transfer Error
+![Transfer Error](screenshots/Screenshot%20(50).png)
+
+### 📉 Amount Too High
+![Amount Too High](screenshots/Screenshot%20(51).png)
+
+### 🔁 Transfer Valid
+![Transfer Valid](screenshots/success.png)
+
+### 👛 Wallet Details
+![Wallet Details](screenshots/Screenshot%20(46).png)
 
 
 
