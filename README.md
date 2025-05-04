@@ -108,7 +108,6 @@ CryptoVault is a Flask-based web application that simulates a secure cryptocurre
 
 ---
 ## 📷 Screenshots
-## 📷 Screenshots
 
 ### 🧭 Dashboard
 ![Dashboard](screenshots/dashboard.png)
