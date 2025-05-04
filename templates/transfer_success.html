@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Transfer Successful</title>
+
+  <!-- Link to external stylesheet (optional for additional styling) -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+
+  <!-- Inline CSS for animation and layout -->
+  <style>
+    /* Container for centering success message and applying fade-in animation */
+    .success-container {
+      text-align: center;
+      margin-top: 100px;
+      animation: fadeIn 1.2s ease-in-out;
+    }
+
+    /* Icon representing cryptocurrency, animated to bounce */
+    .crypto-icon {
+      font-size: 60px;
+      animation: bounce 1s infinite alternate;
+    }
+
+    /* Bounce animation: moves the icon up and down */
+    @keyframes bounce {
+      from { transform: translateY(0); }
+      to { transform: translateY(-15px); }
+    }
+
+    /* Fade-in animation for the container */
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+  </style>
+</head>
+<body>
+  <!-- Success message content -->
+  <div class="success-container">
+    <!-- Animated crypto icon -->
+    <div class="crypto-icon">🪙</div>
+
+    <!-- Confirmation message -->
+    <h1>Transfer Complete!</h1>
+
+    <!-- Summary of transaction using dynamic values from Flask -->
+    <p>Sent <strong>{{ amount }}</strong> CryptoCoins 🪙</p>
+    <p>From Wallet <strong>#{{ source }}</strong> → To Wallet <strong>#{{ target }}</strong></p>
+
+    <!-- Notice of redirect -->
+    <p>You will be redirected to your dashboard in a few seconds...</p>
+  </div>
+
+  <!-- Redirect to dashboard after 10 seconds -->
+  <script>
+    setTimeout(() => {
+      window.location.href = "/dashboard";
+    }, 10000);
+  </script>
+</body>
+</html>

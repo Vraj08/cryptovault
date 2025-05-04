@@ -1,0 +1,36 @@
+<!-- templates/login.html: Secure login form with crypto-themed CSS -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login</title>
+
+  <!-- ✅ Link to custom CSS -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <h1>CryptoVault Login 🔐</h1>
+
+  <!-- If login fails, a generic error is shown. This helps prevent user enumeration. -->
+  {% if error %}
+    <!-- The error message is safely escaped by Jinja to prevent reflected XSS -->
+    <p style="color: red">{{ error }}</p>
+  {% endif %}
+
+  <form method="post" action="/login">
+    <!-- Email input (not auto-filled by browser for security reasons) -->
+    <p>Email: <input type="text" name="email" /></p>
+
+    <!-- Password input (masked, sent over HTTPS in real deployment) -->
+    <p>Password: <input type="password" name="password" /></p>
+
+    <!-- CSRF token prevents cross-site request forgery attacks -->
+    <!-- This token is validated server-side by Flask-WTF -->
+    <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+
+    <p><input type="submit" value="Login" /></p>
+  </form>
+
+</body>
+</html>

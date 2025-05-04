@@ -1,0 +1,29 @@
+<!-- templates/dashboard.html: Secure user dashboard with crypto styling -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>CryptoVault Dashboard</title>
+
+  <!-- ✅ Link to your custom CSS file -->
+  <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+
+  <h1> Welcome to Your CryptoVault</h1>
+
+  <p>What would you like to do today?</p>
+
+  <!-- Links to wallet details (formerly account details) -->
+  <!-- Backend must validate ownership before showing sensitive info -->
+  <p><a href="/details?account=100">View Bitcoin Wallet Balance 🪙</a></p>
+ 
+
+  <!-- Link to transfer interface -->
+  <p><a href="/transfer">Make a Transfer</a></p>
+
+  <!-- Logout simply clears the auth_token cookie -->
+  <p><a href="/logout">Logout</a></p>
+
+</body>
+</html>

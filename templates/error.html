@@ -1,0 +1,23 @@
+<!-- templates/error.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Error</title>
+    <style>
+        body { font-family: sans-serif; background-color: #fff8f8; padding: 2rem; color: #900; }
+        .error-box { border: 1px solid #f99; padding: 1rem; border-radius: 8px; background: #fff0f0; }
+        a { display: inline-block; margin-top: 1rem; color: #0066cc; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="error-box">
+        <h1>Error</h1>
+        <!-- Securely outputting a message that was set by the backend using abort() -->
+        <!-- Flask autoescapes this value to prevent reflected XSS -->
+        <p>{{ message }}</p>
+        <a href="/dashboard">Go back</a>
+    </div>
+</body>
+</html>
