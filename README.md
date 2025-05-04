@@ -36,7 +36,7 @@ CryptoVault is a Flask-based web application that simulates a secure cryptocurre
 
 1. **Clone the repo:**
    ```bash
-   git clone https://github.com/your-username/cryptovault.git
+   git clone https://github.com/Vraj08/cryptovault.git
    cd cryptovault
    ```
 
@@ -115,15 +115,13 @@ CryptoVault is a Flask-based web application that simulates a secure cryptocurre
 
 | Login Error | Login Page | Transfer Error |
 |------------|------------|----------------|
-| ![](screenshots/Screenshot%20(45).png) | ![](screenshots/Screenshot%20(46).png) | ![](screenshots/Screenshot%20(48).png) |
+| ![](screenshots/Screenshot%20(53).png) | ![](screenshots/Screenshot%20(52).png) | ![](screenshots/Screenshot%20(50).png) |
 
 | Amount Too High | Transfer Valid | Wallet Details |
 |-----------------|----------------|----------------|
-| ![](screenshots/Screenshot%20(50).png) | ![](screenshots/Screenshot%20(51).png) | ![](screenshots/Screenshot%20(52).png) |
+| ![](screenshots/Screenshot%20(51).png) | ![](screenshots/success.png) | ![](screenshots/Screenshot%20(46).png) |
 
-| Final Balance |
-|---------------|
-| ![](screenshots/Screenshot%20(53).png) |
+
 
 ---
 
